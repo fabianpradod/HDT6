@@ -20,10 +20,10 @@ package com.hdt6;
      private double weight;
      private List<String> abilities;
      private int generation;
-     private boolean isLegendary;
+     private String isLegendary;
  
      public Pokemon(String name, int pokedexNumber, String type1, String type2, String classification,
-                    double height, double weight, List<String> abilities, int generation, boolean isLegendary) {
+                    double height, double weight, List<String> abilities, int generation, String isLegendary) {
          this.name = name;
          this.pokedexNumber = pokedexNumber;
          this.type1 = type1;
@@ -99,10 +99,10 @@ package com.hdt6;
         this.generation = generation;
     }
 
-     public boolean isLegendary() {
+     public String isLegendary() {
         return isLegendary;
     }
-     public void setLegendary(boolean legendary) {
+     public void setLegendary(String legendary) {
         isLegendary = legendary;
     }
  
