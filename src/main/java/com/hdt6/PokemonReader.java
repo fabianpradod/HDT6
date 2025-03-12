@@ -18,7 +18,7 @@ import java.util.*;
 public class PokemonReader {
 
     /**
-     * Lee el archivo CSV y retorna un Map con el nombre del Pokemon como llave y el objeto Pokemon como valor.
+     * Lee el archivo CSV y retorna un Map con el nombre del Pokemon como llave y el objeto Pokemon como valor
      * 
      * Asumimos el siguiente formato:
      * Name, PokedexNumber, Type1, Type2, Classification, Height(m), Weight(kg), Abilities, Generation, LegendaryStatus
@@ -28,7 +28,7 @@ public class PokemonReader {
      */
 
     public static Map<String, Pokemon> pokemonReader(String file) {
-        Map<String, Pokemon> pokemonMap = new HashMap<>();
+        Map<String, Pokemon> globalPoke = new HashMap<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
@@ -38,7 +38,6 @@ public class PokemonReader {
                 String[] data = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
 
                 // Procesar la data de cada Pokemon
-                
                 String name = data[0].trim();
                 int pokedexNumber = Integer.parseInt(data[1].trim());
                 String type1 = data[2].trim();
@@ -63,13 +62,13 @@ public class PokemonReader {
                 // Crear objeto Pokemon y agregarlo al mapa con el nombre como llave
                 Pokemon pokemon = new Pokemon(name, pokedexNumber, type1, type2, classification,
                                               height, weight, abilities, generation, isLegendary);
-                pokemonMap.put(name, pokemon);
+                globalPoke.put(name, pokemon);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return pokemonMap;
+        return globalPoke;
     }
 }
 

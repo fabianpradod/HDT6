@@ -29,6 +29,8 @@ public class Main {
             String choice = scanner.nextLine();
             System.out.println();
 
+            // Falta agregar la creacion de la coleccion del usuario
+
 
             switch (choice) {
                 case "1":

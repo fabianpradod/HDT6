@@ -99,7 +99,7 @@ package com.hdt6;
         this.generation = generation;
     }
 
-     public String isLegendary() {
+     public String getLegendary() {
         return isLegendary;
     }
      public void setLegendary(String legendary) {
@@ -110,11 +110,11 @@ package com.hdt6;
      public String toString() {
          return "Pokemon{" +
                  "Nombre ='" + name + '\'' +
-                 ", Numero de pokede x=" + pokedexNumber +
+                 ", Numero de pokedex =" + pokedexNumber +
                  ", Type1 ='" + type1 + '\'' +
                  ", Type2 ='" + type2 + '\'' +
                  ", Clasificacion ='" + classification + '\'' +
-                 ", Altur a=" + height +
+                 ", Altura =" + height +
                  ", Peso =" + weight +
                  ", Habilidades =" + abilities +
                  ", Generacion =" + generation +
