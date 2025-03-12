@@ -45,17 +45,7 @@ public class PokemonReader {
                 String classification = data[4].trim();
                 double height = Double.parseDouble(data[5].trim());
                 double weight = Double.parseDouble(data[6].trim());
-
-                // Procesar las habilidades
-                String allAbilities = data[7].trim();
-                allAbilities = allAbilities.substring(1, allAbilities.length() - 1);
-                
-                String[] abilitiesArray = allAbilities.split(",");
-                for (int i = 0; i < abilitiesArray.length; i++) {
-                    abilitiesArray[i] = abilitiesArray[i].trim();
-                }
-                List<String> abilities = Arrays.asList(abilitiesArray);
-                
+                String abilities = data[7].trim();
                 int generation = Integer.parseInt(data[8].trim());
                 String isLegendary = data[9].trim();
                 

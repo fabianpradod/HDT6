@@ -92,4 +92,24 @@ public class PokemonData {
         }
     }
 
+    /**
+     * Muestra los nombres de los Pokemon que poseen la habilidad indicada.
+     *
+     * @param ability   La habilidad para buscar
+     * @param globalPoke Mapa con los Pokemon globales
+     */
+    public static void showPokemonsByAbility(String ability, Map<String, Pokemon> globalPoke) {
+        boolean found = false;
+        System.out.println("Pokemon con la habilidad '" + ability + "':");
+        for (Pokemon k : globalPoke.values()) {
+            if (k.getAbilities().toLowerCase().contains(ability.toLowerCase())) {
+                System.out.println(k.getName());
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("No existe ningun Pokemon con esa habilidad");
+        }
+    }
 }

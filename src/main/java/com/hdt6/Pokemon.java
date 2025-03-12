@@ -1,4 +1,5 @@
 package com.hdt6;
+
 /**
  * Autor: Fabian Prado Dluzniewski #23427
  * Curso: Algoritmos y Estructuras de Datos
@@ -7,9 +8,6 @@ package com.hdt6;
  *
  * Descripción: Clase de cada Pokémon con su información básica
  */
-
- import java.util.List;
-
  public class Pokemon {
      private String name;
      private int pokedexNumber;
@@ -18,12 +16,12 @@ package com.hdt6;
      private String classification;
      private double height;
      private double weight;
-     private List<String> abilities;
+     private String abilities;
      private int generation;
      private String isLegendary;
  
      public Pokemon(String name, int pokedexNumber, String type1, String type2, String classification,
-                    double height, double weight, List<String> abilities, int generation, String isLegendary) {
+                    double height, double weight, String abilities, int generation, String isLegendary) {
          this.name = name;
          this.pokedexNumber = pokedexNumber;
          this.type1 = type1;
@@ -85,10 +83,10 @@ package com.hdt6;
         this.weight = weight;
     }
 
-     public List<String> getAbilities() {
+     public String getAbilities() {
         return abilities;
     }
-     public void setAbilities(List<String> abilities) {
+     public void setAbilities(String abilities) {
         this.abilities = abilities;
     }
 
@@ -108,17 +106,17 @@ package com.hdt6;
  
      @Override
      public String toString() {
-         return "Pokemon{" +
-                 "Nombre ='" + name + '\'' +
-                 ", Numero de pokedex =" + pokedexNumber +
-                 ", Type1 ='" + type1 + '\'' +
-                 ", Type2 ='" + type2 + '\'' +
-                 ", Clasificacion ='" + classification + '\'' +
-                 ", Altura =" + height +
-                 ", Peso =" + weight +
-                 ", Habilidades =" + abilities +
-                 ", Generacion =" + generation +
-                 ", Legendario =" + isLegendary +
-                 '}';
+         return "Pokemon{ " +
+                 "Nombre : " + name + '\'' +
+                 ", Numero de pokedex : " + pokedexNumber +
+                 ", Type1 : " + type1 + '\'' +
+                 ", Type2 : " + type2 + '\'' +
+                 ", Clasificacion : " + classification + '\'' +
+                 ", Altura : " + height +
+                 ", Peso : " + weight +
+                 ", Habilidades : " + abilities +
+                 ", Generacion : " + generation +
+                 ", Legendario : " + isLegendary +
+                 " }";
      }
  }
