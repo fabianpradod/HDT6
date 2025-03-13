@@ -106,17 +106,16 @@ package com.hdt6;
  
      @Override
      public String toString() {
-         return "Pokemon{ " +
-                 "Nombre : " + name + '\'' +
-                 ", Numero de pokedex : " + pokedexNumber +
-                 ", Type1 : " + type1 + '\'' +
-                 ", Type2 : " + type2 + '\'' +
-                 ", Clasificacion : " + classification + '\'' +
-                 ", Altura : " + height +
-                 ", Peso : " + weight +
-                 ", Habilidades : " + abilities +
-                 ", Generacion : " + generation +
-                 ", Legendario : " + isLegendary +
-                 " }";
+         return "Pokemon: \n" +
+                 "\nNombre : " + name +
+                 "\nNumero de pokedex : " + pokedexNumber +
+                 "\nType1 : " + type1 +
+                 "\nType2 : " + type2 + 
+                 "\nClasificacion : " + classification + 
+                 "\nAltura : " + height +
+                 "\nPeso : " + weight +
+                 "\nHabilidades : " + abilities +
+                 "\nGeneracion : " + generation +
+                 "\nLegendario : " + isLegendary +"\n";
      }
  }

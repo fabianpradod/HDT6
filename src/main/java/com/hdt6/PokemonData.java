@@ -33,15 +33,15 @@ public class PokemonData {
      */
     public static void addToUserPokemon(String name, Map<String, Pokemon> userPoke, Map<String, Pokemon> globalPoke) {
         if (userPoke.containsKey(name)) {
-            System.out.println("El Pokemon ya está en la colección del usuario");
+            System.out.println("El Pokemon ya está en la colección del usuario\n");
             return;
         }
         if (!globalPoke.containsKey(name)) {
-            System.out.println("Error: El Pokemon introducido no existe");
+            System.out.println("Error: El Pokemon introducido no existe\n");
             return;
         }
         userPoke.put(name, globalPoke.get(name));
-        System.out.println("Pokemon agregado");
+        System.out.println("Pokemon agregado\n");
     }
 
     /**
@@ -50,9 +50,9 @@ public class PokemonData {
      * @param name          Nombre del Pokemon
      * @param globalPoke    Mapa con los Pokemon globales 
      */
-     public static void showPokemon(String name, Map<String, Pokemon> globalPoke) {
+    public static void showPokemon(String name, Map<String, Pokemon> globalPoke) {
         if (!globalPoke.containsKey(name)) {
-            System.out.println("Error: El Pokemon introducido no existe");
+            System.out.println("Error: El Pokemon introducido no existe\n");
             return;
         }
         System.out.println(globalPoke.get(name).toString());
@@ -65,7 +65,7 @@ public class PokemonData {
      */
     public static void showUserPokemon(Map<String, Pokemon> userPoke) {
         if (userPoke.isEmpty()) {
-            System.out.println("La colección de Pokemon del usuario esta vacía");
+            System.out.println("La colección de Pokemon del usuario esta vacía\n");
             return;
         }
         List<Pokemon> placeHolder = new ArrayList<>(userPoke.values());
@@ -75,6 +75,7 @@ public class PokemonData {
         for (Pokemon i : placeHolder) {
             System.out.println("Nombre: " + i.getName() + " - Type1: " + i.getType1());
         }
+        System.out.println();
     }
 
     /**
@@ -90,6 +91,7 @@ public class PokemonData {
         for (Pokemon k : placeHolder) {
             System.out.println("Nombre: " + k.getName() + " - Type1: " + k.getType1());
         }
+        System.out.println();
     }
 
     /**
@@ -105,11 +107,11 @@ public class PokemonData {
             if (k.getAbilities().toLowerCase().contains(ability.toLowerCase())) {
                 System.out.println(k.getName());
                 found = true;
-                break;
             }
         }
+        System.out.println();
         if (!found) {
-            System.out.println("No existe ningun Pokemon con esa habilidad");
+            System.out.println("No existe ningun Pokemon con esa habilidad\n");
         }
     }
 }
